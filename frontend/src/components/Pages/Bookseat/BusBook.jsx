@@ -94,7 +94,6 @@ const BusBook = () => {
                 }}
                 onClick={() => {
                   dispatch(seatSelectionReducer(bus.name));
-                  dispatch(cartCounter());
                 }}
               ></div>
             );

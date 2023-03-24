@@ -6,7 +6,7 @@ function View() {
   return (
     <div className="navbar">
       <div className="logo">
-        <Link to="/">BOOKING.COM</Link>
+        <Link to="/">BOOKALL.COM</Link>
       </div>
       <div className="offers">
         <Link to="/offers">OFFERS</Link>

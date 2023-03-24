@@ -11,15 +11,16 @@ function ViewNoLog() {
   return (
     <div className="navbar">
       <div className="logo">
-        <Link to="/">BOOKING.COM</Link>
+        <Link to="/">BOOKALL.COM</Link>
       </div>
       <div className="offers">
         <Link to="/offers">OFFERS</Link>
       </div>
       {/* <div className="search-bar"></div> */}
       <div className="log-in" style={{ top: "80%" }}>
-        Hi,
+        Welcome
         <br />
+        {userData.Name}
       </div>
       <div className="log-out">
         <p
