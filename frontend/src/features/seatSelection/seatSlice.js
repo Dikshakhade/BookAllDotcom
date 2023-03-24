@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
-  seat: 0,
+  noOfSeat: 0,
   seatSelect: [],
-  statusbus: [],
+  statusbus: new Set(),
 };
 
 const seatSelection = createSlice({
@@ -14,11 +14,14 @@ const seatSelection = createSlice({
       state.seatSelect.push(action.payload);
       state.statusbus[action.payload] = !state.statusbus[action.payload];
     },
-    seatSatus: (state, action) => {
-      state.statusbus.push(action.payload);
-    },
     cartCounter: (state) => {
-      state.seat.filter((s) => s === true || s === 1);
+      for (let i of state.statusbus) {
+        if (state.statusbus[i]) {
+          state.noOfSeat++;
+        } else {
+          state.noOfSeat--;
+        }
+      }
     },
   },
 });
