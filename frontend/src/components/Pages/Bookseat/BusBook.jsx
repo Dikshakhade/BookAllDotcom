@@ -1,17 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ViewNoLog from "../../headers/ViewNoLog";
 import "./BusBook.css";
-import {
-  cartCounter,
-  seatSelectionReducer,
-} from "../../../features/seatSelection/seatSlice";
+import { seatSelectionReducer } from "../../../features/seatSelection/seatSlice";
 import { useSelector, useDispatch } from "react-redux";
+
+import axios from "axios";
 
 const BusBook = () => {
   const dispatch = useDispatch();
+  const [busDataSeat, setBusDataSeat] = useState();
   const { noOfSeat, statusbus } = useSelector((state) => state.seatSelection);
   // const seat = useSelector((state) => state.seatSelection.seat);
-
+  const hello = async () => {
+    await axios
+      .get("/bus")
+      .then((res) => {
+        console.log(res);
+        setBusDataSeat(res.data.result);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  useEffect(() => {
+    hello();
+  }, []);
   const busSeatData = [
     {
       name: 1,
@@ -78,7 +91,6 @@ const BusBook = () => {
   return (
     <>
       <ViewNoLog />
-      {/* <BusBook2 /> */}
       <div className="whole-bus-div">
         <div className="bus-seat">
           {busSeatData.map((bus) => {
@@ -95,11 +107,16 @@ const BusBook = () => {
                 onClick={() => {
                   dispatch(seatSelectionReducer(bus.name));
                 }}
-              ></div>
+              >
+                {bus.name}
+              </div>
             );
           })}
         </div>
-        <div className="bus-cart">Seat Selected {noOfSeat}</div>
+        <div className="bus-cart">
+          Seat Selected {noOfSeat} <br />
+          price {busDataSeat[0].totalPrice}
+        </div>
       </div>
     </>
   );
