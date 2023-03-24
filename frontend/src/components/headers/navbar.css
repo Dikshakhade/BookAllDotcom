@@ -1,0 +1,116 @@
+.navbar {
+  width: 100vw;
+  height: 15vh;
+  background-color: rgb(0, 0, 0);
+  display: flexbox;
+  position: relative;
+  font-family: "Electrolize", sans-serif;
+  font-weight: bolder;
+  color: white;
+}
+/* @font-face {
+  font-family: FrontPageFont;
+  src: url("E:\myshow\BookingDotCom\frontend\src\Fonts\Electrolize");
+} */
+.logo {
+  font-size: 1.2vw;
+  height: 100%;
+  width: 10vw;
+  /* background-color: azure; */
+  margin: 0;
+  position: absolute;
+  top: 90%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+}
+.offers {
+  font-size: 1.2vw;
+  height: 100%;
+  width: 10%;
+  /* background-color: yellow; */
+  margin: 0;
+  position: absolute;
+  top: 90%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+.search-bar {
+  font-size: 1.2vw;
+  height: 100%;
+  width: 25vw;
+  /* background-color: aqua; */
+  margin: 0;
+  position: absolute;
+  top: 90%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+.log-in {
+  color: white;
+  font-size: 1.2vw;
+  height: 100%;
+  width: 10%;
+  /* background-color: red; */
+  margin: 0;
+  position: absolute;
+  top: 90%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+}
+.sign-up {
+  font-size: 1.2vw;
+  height: 100%;
+  width: 10%;
+  /* background-color: red; */
+  margin: 0;
+  position: absolute;
+  top: 90%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+}
+.log-out {
+  font-size: 1.2vw;
+  height: 100%;
+  width: 10%;
+  /* background-color: red; */
+  margin: 0;
+  position: absolute;
+  top: 90%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+}
+.log-in a {
+  text-decoration: none;
+  color: white;
+}
+.log-in a:hover {
+  color: grey;
+}
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+.logo a:hover {
+  color: grey;
+}
+.offers a {
+  text-decoration: none;
+  color: white;
+}
+.offers a:hover {
+  color: grey;
+}
+.log-out a {
+  text-decoration: none;
+  color: white;
+}
+.log-out a:hover {
+  color: grey;
+}
+.sign-up a {
+  text-decoration: none;
+  color: white;
+}
+.sign-up a:hover {
+  color: grey;
+}

@@ -1,0 +1,70 @@
+.Train-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: grey;
+  font-family: "Electrolize", sans-serif;
+}
+.Train-element {
+  margin: 5.5%;
+  height: 20vh;
+  width: 90vw;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 1%;
+  border-radius: 15px;
+}
+.Train-name {
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+#Train-description {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+}
+#Train-title {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 2.5vw;
+}
+#from-to-train {
+  color: black;
+  padding: 1vw;
+  display: grid;
+  font-size: 2.5vw;
+  grid-template-columns: 1fr 1fr;
+}
+.Train-p {
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+#departure-time-train {
+  color: black;
+  padding: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#price-seat-train {
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  row-gap: 2%;
+}
+.price-train {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  text-align: center;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding-top: 18%;
+}
+.book-seat-train {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 5%;
+}

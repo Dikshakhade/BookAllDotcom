@@ -1,0 +1,74 @@
+.SignUp-div {
+  height: 85vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(49, 48, 48);
+  font-family: FrontPageFont;
+  font-size: 1.5vw;
+  color: black;
+}
+.name-email {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* align-items: center; */
+  width: 30vw;
+  height: 45vh;
+  border-radius: 5px;
+  padding: 1%;
+  color: black;
+  background-color: rgb(224, 224, 224);
+  text-align: center;
+}
+.name-email form {
+  width: 100%;
+  height: 100%;
+}
+.signup-name {
+  height: 25%;
+  width: 100%;
+}
+.signup-name input {
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid rgb(34, 34, 34);
+  background: rgb(224, 224, 224);
+}
+.signup-name input:focus {
+  outline: none;
+}
+.signup-email {
+  height: 23%;
+  width: 100%;
+}
+.signup-email input {
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid rgb(34, 34, 34);
+  background: rgb(224, 224, 224);
+}
+.signup-email input:focus {
+  outline: none;
+}
+.signup-password {
+  height: 18%;
+  width: 100%;
+}
+.signup-password input {
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid rgb(34, 34, 34);
+  background: rgb(224, 224, 224);
+}
+.signup-password input:focus {
+  outline: none;
+}

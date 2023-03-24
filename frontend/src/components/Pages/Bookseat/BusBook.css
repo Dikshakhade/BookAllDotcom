@@ -1,0 +1,35 @@
+.whole-bus-div {
+  height: 85vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 0.5%;
+}
+.bus-seat {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.bus-seats-divs {
+  background-color: rgb(208, 208, 208);
+  margin: 0.7%;
+  height: 17%;
+  width: 4%;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+.bus-seats-divs:hover {
+  scale: 1.07;
+  border: 3px solid rgb(30, 143, 22);
+}
+.bus-cart {
+  height: 100%;
+  width: 100%;
+  background-color: skyblue;
+}

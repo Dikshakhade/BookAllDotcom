@@ -1,0 +1,78 @@
+#root {
+  overflow: hidden;
+}
+.bus-div {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: grey;
+  font-family: "Electrolize", sans-serif;
+}
+.bus-element {
+  margin: 5.5%;
+  height: 20vh;
+  width: 90vw;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 1%;
+  border-radius: 15px;
+}
+.bus-name {
+  border-radius: 10px;
+  background-color: rgb(224, 224, 224);
+}
+#bus-description {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+}
+#bus-title {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 2.5vw;
+}
+#from-to {
+  color: black;
+  padding: 1vw;
+  display: grid;
+  font-size: 2.5vw;
+  grid-template-columns: 1fr 1fr;
+}
+.bus-p {
+  border-radius: 10px;
+  background-color: rgb(224, 224, 224);
+}
+#departure-time {
+  color: black;
+  padding: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#price-seat {
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  row-gap: 2%;
+}
+.price {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  text-align: center;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding-top: 18%;
+}
+.book-seat {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 5%;
+}
+.book-seat:hover {
+  color: gray;
+  cursor: pointer;
+}

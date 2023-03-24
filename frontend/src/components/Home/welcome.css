@@ -1,0 +1,79 @@
+.services-div {
+  height: 85vh;
+  width: 100vw;
+  background-color: rgb(49, 48, 48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+  font-size: 2vh;
+}
+.services {
+  height: 90%;
+  width: 90%;
+  /* background-color: black; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.service {
+  height: 40%;
+  width: 28%;
+  background-color: rgb(224, 224, 224);
+  overflow-wrap: normal;
+  gap: 1%;
+  margin: 1.5%;
+  border-radius: 2%;
+}
+.service:hover {
+  scale: 1.05;
+  transition: 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#Bus {
+  height: 100%;
+  width: 100%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Bus-logo.svg/1024px-Bus-logo.svg.png");
+}
+#Flights {
+  height: 100%;
+  width: 100%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("https://www.freeiconspng.com/thumbs/airplane-icon-png/plane-icon-png-images--pictures--becuo-8.png");
+}
+#Movies {
+  height: 100%;
+  width: 100%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("https://www.iconpacks.net/icons/2/free-movie-icon-2802-thumb.png");
+}
+#Hotels {
+  height: 100%;
+  width: 100%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/2984/2984082.png");
+}
+#Train {
+  height: 100%;
+  width: 100%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/3/3843.png");
+}
+#Concerts {
+  height: 100%;
+  width: 100%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("https://img.icons8.com/ios-filled/512/concert.png");
+}
