@@ -4,26 +4,16 @@ import "./BusBook.css";
 import { seatSelectionReducer } from "../../../features/seatSelection/seatSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { BusData } from "../Bus";
-
 import axios from "axios";
 import { DataBus } from "./DataBus";
+import { useParams } from "react-router-dom";
 
-const BusBook = (props) => {
+function BusBook() {
   const dispatch = useDispatch();
+  const { id } = useParams();
   const [busDataSeat, setbusDataSeat] = useState([]);
   const { noOfSeat, statusbus } = useSelector((state) => state.seatSelection);
-  // const seat = useSelector((state) => state.seatSelection.seat);
-  useEffect(() => {
-    axios
-      .get("/bus")
-      .then((res) => {
-        setbusDataSeat(res.data.result[0]);
-        console.log(busDataSeat);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+
   const busSeatData = [
     {
       name: 1,
@@ -86,17 +76,22 @@ const BusBook = (props) => {
       initialSeatStatus: false,
     },
   ];
-  const [busdataseat, setBusDataSeat] = useState(0);
   useEffect(() => {
     axios
-      .get("/bus")
+      .get(`/bus/${id}`)
       .then((res) => {
-        setBusDataSeat(res.data.result);
+        setbusDataSeat(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
+  // const Singlebus = busDataSeat.find((bus) => {
+  //   return bus._id === busid;
+  // });
+  // {
+  //   console.log("Single" + Singlebus);
+  // }
   return (
     <>
       <ViewNoLog />
@@ -130,6 +125,5 @@ const BusBook = (props) => {
       </div>
     </>
   );
-};
-
+}
 export default BusBook;

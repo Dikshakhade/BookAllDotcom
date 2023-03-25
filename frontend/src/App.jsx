@@ -27,7 +27,7 @@ const App = () => {
             <Route path="/Train" element={<Train />}></Route>
             <Route path="/Movies" element={<Movies />}></Route>
             <Route path="/offers" element={<BackendFormData />}></Route>
-            <Route path="/bookbus" element={<BusBook />}></Route>
+            <Route path="/bus/bookbus/:id" exact element={<BusBook />}></Route>
           </Routes>
         </BrowserRouter>
         <ToastContainer />

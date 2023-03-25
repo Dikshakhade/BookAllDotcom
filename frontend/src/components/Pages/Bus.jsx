@@ -17,9 +17,9 @@ function Bus() {
         console.log(err);
       });
   }, []);
-  const bookseatHandler = () => {
-    navigate("/bookbus");
-  };
+  // const bookseatHandler = () => {
+  //   navigate(`/bookbus`);
+  // };
   return (
     <>
       <ViewNoLog />
@@ -44,7 +44,13 @@ function Bus() {
               </div>
               <div className="bus-name" id="price-seat">
                 <div className="price">Price: {bus.price}</div>
-                <div className="book-seat" onClick={bookseatHandler}>
+                <div
+                  className="book-seat"
+                  // onClick={bookseatHandler}
+                  onClick={() => {
+                    navigate(`bookbus/${bus._id}`);
+                  }}
+                >
                   Book Seat
                 </div>
               </div>

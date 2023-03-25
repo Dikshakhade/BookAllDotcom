@@ -87,4 +87,20 @@ const deleteBusdata = AsyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { BusDataAdd, getBusdata, updateBusdata, deleteBusdata };
+//get Bus by Id
+const getBusByname = AsyncHandler(async (req, res) => {
+  const bus = await Bus.findById(req.params.id);
+  if (bus) {
+    res.status(201).json(bus);
+  } else {
+    res.status(404).json({ message: "Bus Not Found " });
+  }
+});
+
+module.exports = {
+  BusDataAdd,
+  getBusdata,
+  updateBusdata,
+  deleteBusdata,
+  getBusByname,
+};
