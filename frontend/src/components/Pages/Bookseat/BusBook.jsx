@@ -3,28 +3,12 @@ import ViewNoLog from "../../headers/ViewNoLog";
 import "./BusBook.css";
 import { seatSelectionReducer } from "../../../features/seatSelection/seatSlice";
 import { useSelector, useDispatch } from "react-redux";
-
 import axios from "axios";
+import { DataBus } from "./DataBus";
 
-const BusBook = () => {
+const BusBook = (props) => {
   const dispatch = useDispatch();
-  const [busDataSeat, setBusDataSeat] = useState();
   const { noOfSeat, statusbus } = useSelector((state) => state.seatSelection);
-  // const seat = useSelector((state) => state.seatSelection.seat);
-  const hello = async () => {
-    await axios
-      .get("/bus")
-      .then((res) => {
-        console.log(res);
-        setBusDataSeat(res.data.result);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-  useEffect(() => {
-    hello();
-  }, []);
   const busSeatData = [
     {
       name: 1,
@@ -87,7 +71,17 @@ const BusBook = () => {
       initialSeatStatus: false,
     },
   ];
-
+  const [busdataseat, setBusDataSeat] = useState(0);
+  useEffect(() => {
+    axios
+      .get("/bus")
+      .then((res) => {
+        setBusDataSeat(res.data.result);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <>
       <ViewNoLog />
@@ -101,8 +95,9 @@ const BusBook = () => {
                 id={`seat-no-${bus.name}`}
                 style={{
                   border: statusbus[bus.name]
-                    ? "4px solid green"
+                    ? "2px solid green"
                     : "1px solid black",
+                  textAlign: "center",
                 }}
                 onClick={() => {
                   dispatch(seatSelectionReducer(bus.name));
@@ -115,7 +110,7 @@ const BusBook = () => {
         </div>
         <div className="bus-cart">
           Seat Selected {noOfSeat} <br />
-          price {busDataSeat[0].totalPrice}
+          price {<DataBus busNameData={busdataseat} noOfSeat={noOfSeat} />}
         </div>
       </div>
     </>
