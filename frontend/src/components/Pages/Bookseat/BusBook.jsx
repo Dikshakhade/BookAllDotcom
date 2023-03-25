@@ -6,8 +6,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { BusData } from "../Bus";
 
 import axios from "axios";
+import { DataBus } from "./DataBus";
 
-const BusBook = () => {
+const BusBook = (props) => {
   const dispatch = useDispatch();
   const [busDataSeat, setbusDataSeat] = useState([]);
   const { noOfSeat, statusbus } = useSelector((state) => state.seatSelection);
@@ -85,7 +86,17 @@ const BusBook = () => {
       initialSeatStatus: false,
     },
   ];
-
+  const [busdataseat, setBusDataSeat] = useState(0);
+  useEffect(() => {
+    axios
+      .get("/bus")
+      .then((res) => {
+        setBusDataSeat(res.data.result);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <>
       <ViewNoLog />
@@ -99,8 +110,9 @@ const BusBook = () => {
                 id={`seat-no-${bus.name}`}
                 style={{
                   border: statusbus[bus.name]
-                    ? "4px solid green"
+                    ? "2px solid green"
                     : "1px solid black",
+                  textAlign: "center",
                 }}
                 onClick={() => {
                   dispatch(seatSelectionReducer(bus.name));
