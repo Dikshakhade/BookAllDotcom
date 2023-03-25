@@ -3,27 +3,25 @@ import ViewNoLog from "../../headers/ViewNoLog";
 import "./BusBook.css";
 import { seatSelectionReducer } from "../../../features/seatSelection/seatSlice";
 import { useSelector, useDispatch } from "react-redux";
+import { BusData } from "../Bus";
 
 import axios from "axios";
 
 const BusBook = () => {
   const dispatch = useDispatch();
-  const [busDataSeat, setBusDataSeat] = useState();
+  const [busDataSeat, setbusDataSeat] = useState([]);
   const { noOfSeat, statusbus } = useSelector((state) => state.seatSelection);
   // const seat = useSelector((state) => state.seatSelection.seat);
-  const hello = async () => {
-    await axios
+  useEffect(() => {
+    axios
       .get("/bus")
       .then((res) => {
-        console.log(res);
-        setBusDataSeat(res.data.result);
+        setbusDataSeat(res.data.result[0]);
+        console.log(busDataSeat);
       })
       .catch((err) => {
         console.log(err);
       });
-  };
-  useEffect(() => {
-    hello();
   }, []);
   const busSeatData = [
     {
@@ -115,7 +113,7 @@ const BusBook = () => {
         </div>
         <div className="bus-cart">
           Seat Selected {noOfSeat} <br />
-          price {busDataSeat[0].totalPrice}
+          price {busDataSeat.totalPrice * noOfSeat}
         </div>
       </div>
     </>
