@@ -13,6 +13,7 @@ import { BackendFormData } from "./components/BackEndData/BackendFormData";
 import BusBook from "./components/Pages/Bookseat/BusBook";
 import { Provider } from "react-redux";
 import store from "./app/store";
+import TrainBook from "./components/Pages/Bookseat/TrainBook";
 const App = () => {
   return (
     <>
@@ -28,9 +29,13 @@ const App = () => {
             <Route path="/Movies" element={<Movies />}></Route>
             <Route path="/offers" element={<BackendFormData />}></Route>
             <Route path="/bus/bookbus/:id" exact element={<BusBook />}></Route>
+            <Route
+              path="/train/booktrain/:id"
+              exact
+              element={<TrainBook />}
+            ></Route>
           </Routes>
         </BrowserRouter>
-        <ToastContainer />
       </Provider>
     </>
   );

@@ -1,11 +1,11 @@
 import React from "react";
 import { Alert } from "react-bootstrap";
 
-function Error({ variant = "info", children }) {
+function Error(errorMessage) {
   return (
     <div>
-      <Alert variant={variant} style={{ fontSize: 20 }}>
-        <strong>{children}</strong>
+      <Alert variant="danger" style={{ fontSize: 20 }}>
+        <strong>{errorMessage}</strong>
       </Alert>
     </div>
   );

@@ -43,7 +43,7 @@ function Bus() {
                 </div>
               </div>
               <div className="bus-name" id="price-seat">
-                <div className="price">Price: {bus.price}</div>
+                <div className="price">Price: {bus.totalPrice}</div>
                 <div
                   className="book-seat"
                   // onClick={bookseatHandler}

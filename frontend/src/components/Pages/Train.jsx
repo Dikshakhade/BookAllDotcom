@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import "./Train.css";
 import ViewNoLog from "../headers/ViewNoLog";
 import axios from "axios";
+
+import { useNavigate } from "react-router-dom";
 const Train = () => {
+  const navigate = useNavigate();
   const [TrainData, setTrainData] = useState([]);
 
   useEffect(() => {
@@ -43,7 +46,12 @@ const Train = () => {
               </div>
               <div className="Train-name" id="price-seat-train">
                 <div className="price-train">Price: {Train.totalPrice}</div>
-                <div className="book-seat-train">Book Seat</div>
+                <div
+                  className="book-seat-train"
+                  onClick={() => navigate(`booktrain/${Train._id}`)}
+                >
+                  Book Seat
+                </div>
               </div>
             </div>
           </div>

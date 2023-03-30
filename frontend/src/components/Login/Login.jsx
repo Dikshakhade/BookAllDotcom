@@ -69,7 +69,7 @@ export const Login = () => {
   return (
     <>
       {<View />}
-      {/* {error && <Error errorMessage={error} />} */}
+      {error && <Error errorMessage={error} />}
       <div className="Login-div">
         <div className="username-password">
           Log In

@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   noOfSeat: 0,
   seatSelect: [],
-  statusbus: [],
+  statusSeat: [],
 };
 
 const seatSelection = createSlice({
@@ -12,8 +12,8 @@ const seatSelection = createSlice({
     // resetSeat:
     seatSelectionReducer: (state, action) => {
       state.seatSelect.push(action.payload);
-      state.statusbus[action.payload] = !state.statusbus[action.payload];
-      if (state.statusbus[action.payload] === true) {
+      state.statusSeat[action.payload] = !state.statusSeat[action.payload];
+      if (state.statusSeat[action.payload] === true) {
         state.noOfSeat++;
       } else {
         state.noOfSeat--;
@@ -24,5 +24,4 @@ const seatSelection = createSlice({
 });
 
 export default seatSelection.reducer;
-export const { seatSelectionReducer, cartCounter, seatSatus } =
-  seatSelection.actions;
+export const { seatSelectionReducer } = seatSelection.actions;

@@ -33,6 +33,36 @@ export const TrainFormData = () => {
       console.log(error);
     }
   };
+
+  const updateHandler = async () => {
+    try {
+      const config = {
+        headers: {
+          "Content-type": "application/json",
+        },
+      };
+      await axios.put(
+        "/train",
+        { name, from, to, departureTime, totalTime, totalPrice },
+        config
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const deleteHandler = async () => {
+    try {
+      const config = {
+        headers: {
+          "Content-type": "application/json",
+        },
+      };
+      axios.delete("/train", { data: { name } }, config);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <form className="train-form" onSubmit={trainHandler}>
@@ -92,6 +122,8 @@ export const TrainFormData = () => {
           }}
         />
         <input type="submit" value="Add Bus" />
+        <input type="button" value="Update" onClick={updateHandler} />
+        <input type="button" value="Delete" onClick={deleteHandler} />
       </form>
     </>
   );

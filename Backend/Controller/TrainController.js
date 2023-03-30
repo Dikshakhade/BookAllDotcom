@@ -14,6 +14,8 @@ const getTrainData = AsyncHandler(async (req, res) => {
       console.log(err);
     });
 });
+
+//post request
 const TrainDataAdd = AsyncHandler(async (req, res) => {
   const { name, from, to, departureTime, totalTime, totalPrice } =
     await req.body;
@@ -50,4 +52,54 @@ const TrainDataAdd = AsyncHandler(async (req, res) => {
     throw new Error("Error Occured");
   }
 });
-module.exports = { TrainDataAdd, getTrainData };
+
+//put request
+const updateTraindata = AsyncHandler(async (req, res) => {
+  const { name, from, to, departureTime, totalTime, totalPrice } =
+    await req.body;
+  const train = await Train.findOne({ name });
+  if (train) {
+    await train.set({
+      from: from,
+      to: to,
+      departureTime: departureTime,
+      totalTime: totalTime,
+      totalPrice: totalPrice,
+    });
+    await train.save();
+    res.json(train);
+  } else {
+    res.status(404);
+    throw new Error("Train not found");
+  }
+});
+//delete
+const deleteTraindata = AsyncHandler(async (req, res) => {
+  const { name } = await req.body;
+  const train = await Train.findOne({ name });
+  if (train) {
+    train.remove();
+    res.json({ message: "Train Removed " });
+  } else {
+    res.status(500);
+    throw new Error("No Train Found with the given name");
+  }
+});
+
+//get Train by Id
+const getTrainbyId = AsyncHandler(async (req, res) => {
+  const train = await Train.findById(req.params.id);
+  if (train) {
+    res.status(201).json(train);
+  } else {
+    res.status(404).json({ message: "train Not Found " });
+  }
+});
+
+module.exports = {
+  TrainDataAdd,
+  getTrainData,
+  updateTraindata,
+  deleteTraindata,
+  getTrainbyId,
+};

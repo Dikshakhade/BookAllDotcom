@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-function BusBook() {
+function TrainBook() {
   const dispatch = useDispatch();
   const { id } = useParams();
   const [dataSeat, setdataSeat] = useState([]);
@@ -96,7 +96,7 @@ function BusBook() {
   ];
   useEffect(() => {
     axios
-      .get(`/bus/${id}`)
+      .get(`/train/${id}`)
       .then((res) => {
         setdataSeat(res.data);
       })
@@ -110,24 +110,24 @@ function BusBook() {
       <ViewNoLog />
       <div className="whole-seat-div">
         <div className="seat-seat">
-          {seatData.map((bus) => {
+          {seatData.map((train) => {
             return (
               <>
                 <div
                   className="seat-seats-divs"
-                  key={bus.name}
-                  id={`seat-no-${bus.name}`}
+                  key={train.name}
+                  id={`seat-no-${train.name}`}
                   style={{
-                    border: statusSeat[bus.name]
+                    border: statusSeat[train.name]
                       ? "2px solid green"
                       : "1px solid black",
                     textAlign: "center",
                   }}
                   onClick={() => {
-                    dispatch(seatSelectionReducer(bus.name));
+                    dispatch(seatSelectionReducer(train.name));
                   }}
                 >
-                  {bus.name}
+                  {train.name}
                 </div>
               </>
             );
@@ -154,4 +154,5 @@ function BusBook() {
     </>
   );
 }
-export default BusBook;
+
+export default TrainBook;
