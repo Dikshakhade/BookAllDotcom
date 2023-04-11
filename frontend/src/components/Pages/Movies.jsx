@@ -1,7 +1,6 @@
 import React from "react";
 import "./Movies.css";
 import ViewNoLog from "../headers/ViewNoLog";
-
 import { useState, useEffect } from "react";
 import axios from "axios";
 const Movies = () => {
@@ -42,6 +41,9 @@ const Movies = () => {
                 </div>
                 <div className="movie-des" id="movie-year">
                   Year : {movie.Year}
+                </div>
+                <div className="movie-des" id="movie-price">
+                  Price : {movie.totalPrice}
                 </div>
               </div>
               <div className="movie" id="movie-bookseat">

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Booking.css";
 
-function Booking() {
+function Booking(message) {
   return (
     <>
       <div className="booking-div">

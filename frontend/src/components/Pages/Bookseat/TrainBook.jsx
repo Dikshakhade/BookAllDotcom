@@ -7,17 +7,15 @@ import {
 } from "../../../features/seatSelection/seatSlice";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
-import { useParams } from "react-router-dom";
-import Thankyou from "../../Thankyou";
+import { useNavigate, useParams } from "react-router-dom";
 
 function TrainBook() {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();
   const [dataSeat, setdataSeat] = useState([]);
   const { noOfSeat, statusSeat } = useSelector((state) => state.seatSelection);
-  const thankyouHandler = () => {
-    noOfSeat && <Thankyou />;
-  };
+
   const seatData = [
     {
       name: 1,
@@ -126,7 +124,7 @@ function TrainBook() {
                   id={`seat-no-${train.name}`}
                   style={{
                     border: statusSeat[train.name]
-                      ? "2px solid green"
+                      ? "3px solid green"
                       : "1px solid black",
                     textAlign: "center",
                   }}
@@ -155,7 +153,14 @@ function TrainBook() {
             <p>Bus Time: {dataSeat.totalTime}</p>
             <p>Departure Time: {dataSeat.departureTime}</p>
           </div>
-          <div className="confirm-btn" onClick={thankyouHandler}>
+          <div
+            className="confirm-btn"
+            onClick={() => {
+              noOfSeat
+                ? navigate("/bookingconfirm")
+                : alert("Please select seat");
+            }}
+          >
             Confirm Booking
           </div>
         </div>

@@ -1,19 +1,24 @@
 import React from "react";
+import "../components/WhatBooking/Booking.css";
+import { useNavigate } from "react-router-dom";
+import ViewNoLog from "./headers/ViewNoLog";
 
 function Thankyou() {
+  const navigate = useNavigate();
   return (
-    <div
-      style={{
-        position: "absolute",
-        top: "15vh",
-        left: "25vw",
-        height: "20vh",
-        width: "30vh",
-        backgroundColor: "blue",
-      }}
-    >
-      Thank You!!!
-    </div>
+    <>
+      <ViewNoLog />
+      <div className="booking-div">
+        <p>ThankYou For Booking !!!</p>
+        <button
+          onClick={() => {
+            navigate("/welcome");
+          }}
+        >
+          Back
+        </button>
+      </div>
+    </>
   );
 }
 

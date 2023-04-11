@@ -14,6 +14,7 @@ import BusBook from "./components/Pages/Bookseat/BusBook";
 import { Provider } from "react-redux";
 import store from "./app/store";
 import TrainBook from "./components/Pages/Bookseat/TrainBook";
+import Thankyou from "./components/Thankyou";
 const App = () => {
   return (
     <>
@@ -34,6 +35,7 @@ const App = () => {
               exact
               element={<TrainBook />}
             ></Route>
+            <Route path="/bookingconfirm" element={<Thankyou />}></Route>
           </Routes>
         </Provider>
       </BrowserRouter>

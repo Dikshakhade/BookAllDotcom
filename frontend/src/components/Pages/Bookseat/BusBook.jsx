@@ -7,11 +7,13 @@ import {
 } from "../../../features/seatSelection/seatSlice";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Thankyou from "../../Thankyou";
+import Error from "../../Error/Error";
 
 function BusBook() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { id } = useParams();
   const [dataSeat, setdataSeat] = useState([]);
   const { noOfSeat, statusSeat } = useSelector((state) => state.seatSelection);
@@ -110,14 +112,9 @@ function BusBook() {
     dispatch(resetSeat());
   }, []);
 
-  const showHandler = () => {
-    noOfSeat && <Thankyou />;
-  };
-
   return (
     <>
       <ViewNoLog />
-      {/* <Thankyou /> */}
       <div className="whole-seat-div">
         <div className="seat-seat">
           {seatData.map((bus) => {
@@ -129,7 +126,7 @@ function BusBook() {
                   id={`seat-no-${bus.name}`}
                   style={{
                     border: statusSeat[bus.name]
-                      ? "2px solid green"
+                      ? "3px solid green"
                       : "1px solid black",
                     textAlign: "center",
                   }}
@@ -158,7 +155,14 @@ function BusBook() {
             <p>Bus Time: {dataSeat.totalTime}</p>
             <p>Departure Time: {dataSeat.departureTime}</p>
           </div>
-          <div className="confirm-btn" onClick={showHandler}>
+          <div
+            className="confirm-btn"
+            onClick={() => {
+              noOfSeat
+                ? navigate("/bookingconfirm")
+                : alert("Please select seat");
+            }}
+          >
             Confirm Booking
           </div>
         </div>
