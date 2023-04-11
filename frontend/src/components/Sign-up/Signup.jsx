@@ -5,13 +5,15 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { register, reset } from "../../features/auth/authSlice";
-import Spinner from "../Spinner";
+import Loading from "../Loading";
+import Error from "../Error/Error";
 
 const Signup = () => {
   const [Name, setsignupName] = useState("");
   const [Email, setsignupEmail] = useState("");
   const [Password, setsignupPassword] = useState("");
   const [Password1, setsignupPassword1] = useState("");
+  const [error, setError] = useState(false);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -32,18 +34,17 @@ const Signup = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     if (Password !== Password1) {
-      toast.error("Password do not match ");
+      setError(true);
     } else {
       const userData = { Name, Email, Password };
       dispatch(register(userData));
     }
   };
-  if (isLoading) {
-    return <Spinner />;
-  }
   return (
     <>
       {<View />}
+      {error && <Error errorMessage={"Passwords do not match "} />}
+      {isLoading && <Loading />}
       <div className="SignUp-div">
         <div className="name-email">
           Sign Up

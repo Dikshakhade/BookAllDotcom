@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from "react";
 import ViewNoLog from "../../headers/ViewNoLog";
 import "./AllBook.css";
-import { seatSelectionReducer } from "../../../features/seatSelection/seatSlice";
+import {
+  seatSelectionReducer,
+  resetSeat,
+} from "../../../features/seatSelection/seatSlice";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import Thankyou from "../../Thankyou";
 
 function TrainBook() {
   const dispatch = useDispatch();
   const { id } = useParams();
   const [dataSeat, setdataSeat] = useState([]);
   const { noOfSeat, statusSeat } = useSelector((state) => state.seatSelection);
-
+  const thankyouHandler = () => {
+    noOfSeat && <Thankyou />;
+  };
   const seatData = [
     {
       name: 1,
@@ -103,6 +109,7 @@ function TrainBook() {
       .catch((err) => {
         console.log(err);
       });
+    dispatch(resetSeat());
   }, []);
 
   return (
@@ -148,7 +155,9 @@ function TrainBook() {
             <p>Bus Time: {dataSeat.totalTime}</p>
             <p>Departure Time: {dataSeat.departureTime}</p>
           </div>
-          <div className="confirm-btn">Confirm Booking</div>
+          <div className="confirm-btn" onClick={thankyouHandler}>
+            Confirm Booking
+          </div>
         </div>
       </div>
     </>

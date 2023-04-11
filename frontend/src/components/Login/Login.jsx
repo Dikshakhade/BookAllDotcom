@@ -6,6 +6,8 @@ import { reset, login } from "../../features/auth/authSlice";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import Loading from "../Loading";
+
 export const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -17,7 +19,8 @@ export const Login = () => {
   const [error, setError] = useState(false);
   useEffect(() => {
     if (isError) {
-      toast.error(message);
+      setError(message);
+      console.log(message);
     }
     if (isSuccess || userData) {
       navigate("/welcome");
@@ -30,46 +33,13 @@ export const Login = () => {
     const userData = { Email, Password };
     dispatch(login(userData));
   };
-  // const submitFunction = () => {
-  //   const userData = localStorage.getItem("userData");
-  //   if (userData) {
-  //     loggedIn("/welcome");
-  //   }
-  // };
-  // useEffect(() => {
-  //   console.log("run");
-  //   submitFunction();
-  // }, []);
-  // const Handler = async (ev) => {
-  //   ev.preventDefault();
-  //   setEmail("");
-  //   setPassword("");
-  //   try {
-  //     const config = {
-  //       headers: {
-  //         "Content-type": "application/json",
-  //       },
-  //     };
-  //     const { data } = await axios.post(
-  //       "/login",
-  //       {
-  //         Email,
-  //         Password,
-  //       },
-  //       config
-  //     );
-  //     localStorage.setItem("userData", JSON.stringify(data));
-  //     console.log(data);
-  //     submitFunction();
-  //   } catch (error) {
-  //     setError(error);
-  //     console.log(error);
-  //   }
-  // };
+
   return (
     <>
       {<View />}
-      {error && <Error errorMessage={error} />}
+      {isLoading && <Loading />}
+      {error && <Error variant="danger" errorMessage={error} />}
+
       <div className="Login-div">
         <div className="username-password">
           Log In

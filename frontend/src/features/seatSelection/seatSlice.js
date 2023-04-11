@@ -9,7 +9,11 @@ const seatSelection = createSlice({
   name: "seatSelection",
   initialState,
   reducers: {
-    // resetSeat:
+    resetSeat: (state) => {
+      state.noOfSeat = 0;
+      state.seatSelect = [];
+      state.statusSeat = [];
+    },
     seatSelectionReducer: (state, action) => {
       state.seatSelect.push(action.payload);
       state.statusSeat[action.payload] = !state.statusSeat[action.payload];
@@ -24,4 +28,4 @@ const seatSelection = createSlice({
 });
 
 export default seatSelection.reducer;
-export const { seatSelectionReducer } = seatSelection.actions;
+export const { seatSelectionReducer, resetSeat } = seatSelection.actions;
