@@ -3,7 +3,9 @@ import "./Movies.css";
 import ViewNoLog from "../headers/ViewNoLog";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const Movies = () => {
+  const navigate = useNavigate();
   const [MovieData, setMovieData] = useState([]);
   useEffect(() => {
     axios
@@ -30,15 +32,19 @@ const Movies = () => {
                 style={{ backgroundImage: `url("${movie.Poster}")` }}
               ></div>
               <div className="movie" id="movie-description">
-                <div className="movie-des" id="movie-name">
+                <div
+                  className="movie-des"
+                  id="movie-name"
+                  style={{ color: "black", fontSize: "bolder" }}
+                >
                   {movie.Title}
                 </div>
                 <div className="movie-des" id="movie-rating">
-                  {movie.Rating} /10
+                  Rating : {movie.Rating} /10
                 </div>
-                <div className="movie-des" id="movie-duration">
+                {/* <div className="movie-des" id="movie-duration">
                   Duration : {movie.Runtime}
-                </div>
+                </div> */}
                 <div className="movie-des" id="movie-year">
                   Year : {movie.Year}
                 </div>
@@ -46,7 +52,13 @@ const Movies = () => {
                   Price : {movie.totalPrice}
                 </div>
               </div>
-              <div className="movie" id="movie-bookseat">
+              <div
+                className="movie"
+                id="movie-bookseat"
+                onClick={() => {
+                  navigate(`bookmovie/${movie._id}`);
+                }}
+              >
                 Book Seat
               </div>
             </div>

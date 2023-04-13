@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./BackEndFormData.css";
 import axios from "axios";
+import Error from "../Error/Error";
 export const TrainFormData = () => {
   const [name, setTrainName] = useState("");
   const [from, setFrom] = useState("");
@@ -8,7 +9,7 @@ export const TrainFormData = () => {
   const [departureTime, setDepartureTime] = useState("");
   const [totalTime, setTotalTime] = useState("");
   const [totalPrice, setPrice] = useState("");
-
+  const [error, seterror] = useState("");
   const trainHandler = async () => {
     try {
       const config = {
@@ -65,6 +66,7 @@ export const TrainFormData = () => {
   };
   return (
     <>
+      {error && <Error errorMessage={error} />}
       <form className="train-form" onSubmit={trainHandler}>
         Add New Train
         <input
@@ -121,7 +123,7 @@ export const TrainFormData = () => {
             setPrice(e.target.value);
           }}
         />
-        <input type="submit" value="Add Bus" />
+        <input type="submit" value="Add Train" />
         <input type="button" value="Update" onClick={updateHandler} />
         <input type="button" value="Delete" onClick={deleteHandler} />
       </form>

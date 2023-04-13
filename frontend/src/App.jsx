@@ -15,6 +15,7 @@ import { Provider } from "react-redux";
 import store from "./app/store";
 import TrainBook from "./components/Pages/Bookseat/TrainBook";
 import Thankyou from "./components/Thankyou";
+import MovieBook from "./components/Pages/Bookseat/MovieBook";
 const App = () => {
   return (
     <>
@@ -34,6 +35,11 @@ const App = () => {
               path="/train/booktrain/:id"
               exact
               element={<TrainBook />}
+            ></Route>
+            <Route
+              path="/movies/bookmovie/:id"
+              exact
+              element={<MovieBook />}
             ></Route>
             <Route path="/bookingconfirm" element={<Thankyou />}></Route>
           </Routes>

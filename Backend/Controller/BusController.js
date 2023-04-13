@@ -58,7 +58,6 @@ const updateBusdata = AsyncHandler(async (req, res) => {
     await req.body;
   const bus = await Bus.findOne({ name });
   if (bus) {
-    // Bus.update({name:name},{$set{from:from,to:to,departureTime:departureTime,totalTime:totalTime,totalPrice:totalPrice}})
     await bus.set({
       from: from,
       to: to,

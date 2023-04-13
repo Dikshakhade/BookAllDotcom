@@ -1,6 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const { MovieDataAdd, getMoviedata } = require("../Controller/MovieController");
+const {
+  MovieDataAdd,
+  getMoviedata,
+  movieUpdate,
+  deleteMovie,
+  getMovieTitle,
+} = require("../Controller/MovieController");
 // const MovieData = [
 //   {
 //     Title: "The Lion King",
@@ -45,6 +51,7 @@ const { MovieDataAdd, getMoviedata } = require("../Controller/MovieController");
 // ];
 
 router.route("/movie").post(MovieDataAdd);
-router.route("/movie").get(getMoviedata);
+router.route("/movie").get(getMoviedata).put(movieUpdate).delete(deleteMovie);
+router.route("/movie/:id").get(getMovieTitle);
 
 module.exports = router;
