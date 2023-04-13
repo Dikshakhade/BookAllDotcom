@@ -6,7 +6,7 @@ A full Stack MERN application for booking seats of movies, bus, concerts, planes
 * MongoDb Atlas
 * Node Js
 * Express
-# Npm Package dependencies Used:
+# NPM Package Dependencies Used:
 ## Frontend 
 
 ```
