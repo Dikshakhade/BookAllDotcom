@@ -23,7 +23,8 @@ A full Stack MERN application for booking seats of movies, bus, concerts, planes
     "react-scripts": "5.0.1",
     "thunk": "^0.0.1",
 ```    
-Backend
+## Backend
+```
 "@reduxjs/toolkit": "^1.9.3",
     "bcrypt": "^5.1.0",
     "concurrently": "^7.6.0",
@@ -34,8 +35,12 @@ Backend
     "mongoose": "^6.10.0",
     "nodemon": "^2.0.21",
     "react-redux": "^8.0.5",
+```
     
 		
-# Some SnapShots of Website 
+# Some SnapShots of Website
+##Front Page
+![image](https://user-images.githubusercontent.com/91481706/231725497-b96d18ae-9b58-4a90-b80d-fb1b85ceb896.png)
+
 
   
