@@ -63,8 +63,8 @@ A full Stack MERN application for booking seats of movies, bus, concerts, planes
 ![image](https://user-images.githubusercontent.com/91481706/231732917-3a8d594d-d788-4ea6-af09-f8f291ef83be.png)
 
 # Authors
-* @DikshaKhade
-* @AbhishekKhande
+* [DikshaKhade](https://github.com/DikshaKhade)
+* [AbhishekKhande](https://github.com/AbhishekKhande)
 
 
 
