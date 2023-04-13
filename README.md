@@ -1,11 +1,11 @@
 # BookAllDotcom
 A full Stack MERN application for booking seats of movies, bus, concerts, planes etc.
 # Tech Stack used
-* React
+* React.js
 * CSS
-* MongoDb Atlas
-* Node Js
-* Express
+* MongoDB Atlas
+* Node.js
+* Express.js
 # NPM Package Dependencies Used:
 ## Frontend 
 
@@ -53,7 +53,7 @@ A full Stack MERN application for booking seats of movies, bus, concerts, planes
 ![image](https://user-images.githubusercontent.com/91481706/231732131-ce1ce2b4-433c-4942-a0ea-758a3764964c.png)
 
 ## For booking Seat
-### Here State Mangement is using Redux Toolkit 
+### State Mangement using Redux Toolkit 
 ![image](https://user-images.githubusercontent.com/91481706/231732401-86d87dce-f13d-4eba-bf06-af531b6fe9db.png)
 ![image](https://user-images.githubusercontent.com/91481706/231732522-d1471026-0170-442d-b90c-b8eb14a9232c.png)
 ![image](https://user-images.githubusercontent.com/91481706/231732632-e4916441-3c03-4463-9170-ac287d0ed8fb.png)
@@ -63,8 +63,8 @@ A full Stack MERN application for booking seats of movies, bus, concerts, planes
 ![image](https://user-images.githubusercontent.com/91481706/231732917-3a8d594d-d788-4ea6-af09-f8f291ef83be.png)
 
 # Authors
-* [DikshaKhade](https://github.com/DikshaKhade)
-* [AbhishekKhande](https://github.com/AbhishekKhande)
+* [Diksha Khade](https://github.com/DikshaKhade)
+* [Abhishek Khande](https://github.com/AbhishekKhande)
 
 
 
