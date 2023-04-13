@@ -39,8 +39,34 @@ A full Stack MERN application for booking seats of movies, bus, concerts, planes
     
 		
 # Some SnapShots of Website
-##Front Page
-![image](https://user-images.githubusercontent.com/91481706/231725497-b96d18ae-9b58-4a90-b80d-fb1b85ceb896.png)
+## Front Page
+![image](https://user-images.githubusercontent.com/91481706/231726113-81029305-f1d3-4aa0-91a3-acb7d958d744.png)
+## Login and SignUp Page
+![image](https://user-images.githubusercontent.com/91481706/231726287-1387db0e-1785-4f6f-89c8-2af0e8f45a8b.png)
+![image](https://user-images.githubusercontent.com/91481706/231726330-0727839c-e593-4743-be92-bb6247c9f865.png)
+## Welcome Page
+![image](https://user-images.githubusercontent.com/91481706/231726760-86ec4e02-eeaa-47a3-b47f-bcc2e25557bb.png)
+
+## Specific Booking Pages
+![image](https://user-images.githubusercontent.com/91481706/231728219-30706c57-0e21-47f7-bbfd-e97176f9cc12.png)
+![image](https://user-images.githubusercontent.com/91481706/231728304-5cbe1e4d-1e45-4d71-a2df-2bda2124865e.png)
+![image](https://user-images.githubusercontent.com/91481706/231732131-ce1ce2b4-433c-4942-a0ea-758a3764964c.png)
+
+## For booking Seat
+### Here State Mangement is using Redux Toolkit 
+![image](https://user-images.githubusercontent.com/91481706/231732401-86d87dce-f13d-4eba-bf06-af531b6fe9db.png)
+![image](https://user-images.githubusercontent.com/91481706/231732522-d1471026-0170-442d-b90c-b8eb14a9232c.png)
+![image](https://user-images.githubusercontent.com/91481706/231732632-e4916441-3c03-4463-9170-ac287d0ed8fb.png)
+
+## Manage Data In the System [Backend]
+### To Add, Update and Delete the Data 
+![image](https://user-images.githubusercontent.com/91481706/231732917-3a8d594d-d788-4ea6-af09-f8f291ef83be.png)
+
+# Authors
+@DikshaKhade
+@AbhishekKhande
+
+
 
 
   
