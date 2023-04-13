@@ -1,12 +1,12 @@
 # BookAllDotcom
 A full Stack MERN application for booking seats of movies, bus, concerts, planes etc.
-#Tech Stack used
+# Tech Stack used
 React
 CSS
 MongoDb Atlas
 Node Js
 Express
-#Npm Package dependencies Used:
+# Npm Package dependencies Used:
 Frontend 
  "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^5.16.5",
@@ -32,6 +32,6 @@ Backend
     "nodemon": "^2.0.21",
     "react-redux": "^8.0.5",
 		
-#Some SnapShots of Website 
+# Some SnapShots of Website 
 
   
