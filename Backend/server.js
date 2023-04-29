@@ -6,11 +6,12 @@ const userLogin = require("./routes/loginRoute");
 const busInfo = require("./routes/busRoute");
 const TrainData = require("./routes/trainRoute");
 const MovieData = require("./routes/movieRoute");
-
+// const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 4000;
 dotenv.config();
 connectDB();
+// app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
