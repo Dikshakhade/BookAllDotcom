@@ -18,7 +18,7 @@ export const BusFormData = () => {
         },
       };
       await axios.post(
-        "/bus",
+        "https://bookalldotcom.onrender.com/bus",
         {
           name,
           from,
