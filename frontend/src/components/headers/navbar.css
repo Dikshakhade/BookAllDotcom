@@ -23,7 +23,7 @@
   left: 10%;
   transform: translate(-50%, -50%);
 }
-.offers {
+.add {
   font-size: 1.2vw;
   height: 100%;
   width: 10%;
@@ -34,17 +34,7 @@
   left: 25%;
   transform: translate(-50%, -50%);
 }
-.search-bar {
-  font-size: 1.2vw;
-  height: 100%;
-  width: 25vw;
-  /* background-color: aqua; */
-  margin: 0;
-  position: absolute;
-  top: 90%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-}
+
 .log-in {
   color: white;
   font-size: 1.2vw;
@@ -93,11 +83,11 @@
 .logo a:hover {
   color: grey;
 }
-.offers a {
+.add a {
   text-decoration: none;
   color: white;
 }
-.offers a:hover {
+.add a:hover {
   color: grey;
 }
 .log-out a {

@@ -6,10 +6,10 @@ function View() {
   return (
     <div className="navbar">
       <div className="logo">
-        <Link to="/">BOOKALL.COM</Link>
+        <Link to="/">BOOKALLDOTCOM</Link>
       </div>
-      <div className="offers">
-        <Link to="/offers">OFFERS</Link>
+      <div className="add">
+        <Link to="/add">ADD</Link>
       </div>
       {/* <div className="search-bar"></div> */}
       <div className="log-in">

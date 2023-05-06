@@ -59,7 +59,7 @@ const Movies = () => {
                   navigate(`bookmovie/${movie._id}`);
                 }}
               >
-                Book Seat
+                <span>Book Seat</span>
               </div>
             </div>
           </div>

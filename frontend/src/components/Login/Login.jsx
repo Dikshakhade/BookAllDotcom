@@ -50,7 +50,7 @@ export const Login = () => {
                   type={"email"}
                   value={Email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Username/Email"
+                  placeholder="test@30"
                 />
               </label>
             </div>
@@ -60,7 +60,7 @@ export const Login = () => {
                   type={"password"}
                   value={Password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Password"
+                  placeholder="test"
                 />
               </label>
             </div>

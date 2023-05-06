@@ -148,7 +148,8 @@ function BusBook() {
             <p>{dataSeat.totalPrice * noOfSeat}</p>
           </div>
           <div className="seat-description" key={dataSeat.name}>
-            <p>Description</p>
+            <h1 className="description">Description</h1>
+            <p></p>
             <p>Name: {dataSeat.name}</p>
             <p>From: {dataSeat.from}</p>
             <p>To: {dataSeat.to}</p>
@@ -163,7 +164,7 @@ function BusBook() {
                 : alert("Please select seat");
             }}
           >
-            Confirm Booking
+            <span> Confirm Booking</span>
           </div>
         </div>
       </div>

@@ -14,9 +14,8 @@
 }
 .movie {
   background-repeat: no-repeat;
-
   background-size: cover;
-  background-position: center;
+  background-position: top;
   border-radius: 10px;
   background-color: rgb(255, 254, 254);
   display: grid;
@@ -32,6 +31,12 @@
   background-color: black;
   color: white;
   text-align: center;
-  padding-top: 60%;
   font-size: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#movie-bookseat:hover {
+  cursor: pointer;
 }
