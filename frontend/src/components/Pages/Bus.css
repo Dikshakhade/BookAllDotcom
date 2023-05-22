@@ -76,3 +76,8 @@
   color: gray;
   cursor: pointer;
 }
+@media (max-width: 850px) {
+  .bus-div {
+    margin-bottom: 5%;
+  }
+}
