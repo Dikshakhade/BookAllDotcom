@@ -68,3 +68,12 @@
   height: 33.3%;
   width: 100%;
 }
+@media (max-width: 850px) {
+  .Login-div {
+    font-size: 1rem;
+  }
+  .username-password {
+    width: 40%;
+    height: 35%;
+  }
+}

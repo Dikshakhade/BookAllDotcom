@@ -27,3 +27,11 @@
   left: 50%;
   padding: 10px;
 }
+@media (max-width: 650px) {
+  .booking-div {
+    width: 100%;
+  }
+  .booking-div p {
+    width: 100%;
+  }
+}

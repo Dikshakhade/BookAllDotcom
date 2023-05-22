@@ -11,7 +11,7 @@ function ViewNoLog() {
   return (
     <div className="navbar">
       <div className="logo">
-        <Link to="/">BOOKALLDOTCOM</Link>
+        <Link to="/">BOOKALL</Link>
       </div>
       <div className="add">
         <Link to="/add">ADD</Link>

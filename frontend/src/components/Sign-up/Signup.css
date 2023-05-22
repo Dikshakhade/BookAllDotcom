@@ -72,3 +72,12 @@
 .signup-password input:focus {
   outline: none;
 }
+@media (max-width: 850px) {
+  .SignUp-div {
+    font-size: 1rem;
+  }
+  .name-email {
+    width: 50%;
+    height: 50%;
+  }
+}
