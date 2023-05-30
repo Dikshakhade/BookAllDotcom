@@ -72,3 +72,20 @@
 .confirm-btn span {
   font-size: 1.5vw;
 }
+
+@media (max-width: 850px) {
+  .seat-seats-divs {
+    height: 18%;
+    width: 10%;
+  }
+  .seat-cart p {
+    font-size: 4vw;
+  }
+  .seat-description {
+    font-size: 3vw;
+    line-height: 2.8vw;
+  }
+  .confirm-btn {
+    font-size: 3vw;
+  }
+}

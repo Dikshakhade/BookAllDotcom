@@ -30,8 +30,14 @@
 @media (max-width: 650px) {
   .booking-div {
     width: 100%;
+    font-size: 7vw;
   }
   .booking-div p {
     width: 100%;
+  }
+  .booking-div button {
+    font-size: 5vw;
+
+    width: 25vw;
   }
 }

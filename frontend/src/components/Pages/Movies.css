@@ -40,3 +40,12 @@
 #movie-bookseat:hover {
   cursor: pointer;
 }
+@media (max-width: 850px) {
+  .movie-parent-div {
+    height: 19vh;
+    margin: 7.5%;
+  }
+  #movie-bookseat {
+    font-size: 4vw;
+  }
+}

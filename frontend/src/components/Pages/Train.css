@@ -69,3 +69,15 @@
   padding-top: 5%;
   cursor: pointer;
 }
+@media (max-width: 850px) {
+  .Train-element {
+    margin-top: 2.5rem;
+    height: 35vh;
+  }
+  #from-to-train {
+    font-size: 5vw;
+  }
+  #Train-title {
+    font-size: 5vw;
+  }
+}

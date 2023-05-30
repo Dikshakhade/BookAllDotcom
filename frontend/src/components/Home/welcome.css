@@ -79,3 +79,12 @@
   background-position: center;
   background-image: url("https://img.icons8.com/ios-filled/512/concert.png");
 }
+@media (max-width: 650px) {
+  .services {
+    height: 80vh;
+  }
+  .service {
+    height: 40%;
+    width: 40%;
+  }
+}

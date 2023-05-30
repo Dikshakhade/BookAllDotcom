@@ -12,7 +12,7 @@
 }
 .bus-element {
   margin: 5.5%;
-  height: 20vh;
+  height: 35vh;
   width: 90vw;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -79,5 +79,8 @@
 @media (max-width: 850px) {
   .bus-div {
     margin-bottom: 5%;
+  }
+  #bus-title {
+    font-size: 5vw;
   }
 }
